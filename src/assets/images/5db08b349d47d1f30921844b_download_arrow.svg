@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.179" height="17.316" viewBox="0 0 15.179 17.316">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="15.178" height="17.316" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="menu_import" data-name="menu import" clip-path="url(#clip-path)">
+    <path id="Path_56" data-name="Path 56" d="M709.322,870.79l7.548-4.924" transform="matrix(-0.545, 0.839, -0.839, -0.545, 1124.255, -119.238)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_57" data-name="Path 57" d="M709.865,865.922l2.658-1.862,2,2.6" transform="translate(846.585 752.92) rotate(171)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Rectangle_3_copy_4" data-name="Rectangle 3 copy 4" d="M33.681,464.151l.01,2.557a2.251,2.251,0,0,0,.31,1.135,40.119,40.119,0,0,0,5.09,3.257l0,0a4.324,4.324,0,0,0,1.163.321,2.3,2.3,0,0,0,1.163-.306c4.5-2.522,4.839-2.816,5.076-3.182a2.242,2.242,0,0,0,.363-1.226v-2.447" transform="translate(-32.681 -455.106)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

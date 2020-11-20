@@ -1,0 +1,29 @@
+.burger {
+    background-image: url(../../../assets/images/5dadecd7f8739f2975d9d90f_burger_menu.svg);
+}
+.burger-menu-active {
+    display: block;
+    opacity: 1;
+}
+
+.burger-active {
+        margin-right: 2px;
+        margin-left: 2px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    background-image: url(../../../assets/images/5dc987055e5d7d9efd2961ef_exit.svg);
+}
+
+.w-dropdown-list {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    min-width: 100%;
+  }
+  .w-dropdown-list.w--open {
+    position: relative;
+    display: block;
+    opacity: 1;
+  }
