@@ -9,7 +9,7 @@
         class="burger-drop-menu-toggle w-dropdown-toggle"
         (click)="burgerAboutusDropdown()"
       >
-        <div>About us</div>
+        <div>{{ "header.aboutus" | translate }}</div>
         <img
           src="../../../assets/images/5da9f6e53b1af8f6b3417511_arrow_down.svg"
           alt=""
@@ -142,7 +142,7 @@
       <a href="#" class="menu-item w-inline-block"
         ><div class="dropdown-menu-toggle" (mouseenter)="enterAbout()">
           <div [ngClass]="{ 'reduce-opacity': abouttoggle == true }">
-            About us
+            {{ "header.aboutus" | translate }}
           </div>
           <img
             src="../../../assets/images/5da9f6e53b1af8f6b3417511_arrow_down.svg"
@@ -162,6 +162,13 @@
         class="header-signup-button w-inline-block"
         ><div>Sign up</div></a
       >
+      <button
+        (click)="changeLang()"
+        id="setlang_btn"
+        class="header-signup-button w-inline-block"
+      >
+        <div>{{ "header.lang" | translate }}</div>
+      </button>
     </div>
   </div>
   <div class="header-menu-bg"></div>

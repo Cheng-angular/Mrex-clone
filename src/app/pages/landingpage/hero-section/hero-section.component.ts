@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import Typed from 'typed.js';
 
 @Component({
@@ -8,7 +9,7 @@ import Typed from 'typed.js';
 })
 export class HeroSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
     const options = {

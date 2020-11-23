@@ -12,6 +12,9 @@ import { ResearchModule } from './pages/research/research.module';
 import { ContactusModule } from './pages/contactus/contactus.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,10 +33,18 @@ import { FooterComponent } from './shared/footer/footer.component';
     AboutCareersModule,
     AboutInvestorModule,
     ResearchModule,
-    ContactusModule
+    ContactusModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {provide: TranslateLoader, useFactory: httpTranslateLoader, deps:[HttpClient]}
+    })
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { LandingpageRoutingModule } from './landingpage-routing.module';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { MaintradeSectionComponent } from './maintrade-section/maintrade-section.component';
@@ -28,6 +28,9 @@ import { MainTodayComponent } from './main-today/main-today.component';
   imports: [
     CommonModule,
     LandingpageRoutingModule
-  ]
+  ],
+  exports: [
+    TranslateModule
+  ],
 })
 export class LandingpageModule { }

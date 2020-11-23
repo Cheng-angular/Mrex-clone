@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +12,24 @@ export class HeaderComponent implements OnInit {
   mobiledropdown: Boolean;
   aboutnavshow: Boolean;
   productsnavshow: Boolean;
-  constructor() { }
+  langs = ['en', 'fr'];
 
-  ngOnInit(): void {
+  constructor(public translate: TranslateService) {
+    translate.addLangs(this.langs);
+  }
+
+  public ngOnInit(): void {
+    const currLang = this.translate.getBrowserLang();
+    switch (currLang) {
+      case 'en': {
+        this.translate.use(this.langs[0]);
+        break;
+      }
+      case 'fr': {
+        this.translate.use(this.langs[1]);
+        break;
+      }
+    }
   }
 
   enterProduct() {
@@ -50,4 +66,13 @@ export class HeaderComponent implements OnInit {
     this.aboutnavshow = false;
   }
 
+  public changeLang() {
+    const lang_value = document.getElementById('setlang_btn');
+    if(lang_value.textContent === 'Français') {
+      console.log(lang_value.textContent);
+      this.translate.use(this.langs[1]);
+    } else {
+      this.translate.use(this.langs[0]);
+    }
+  }
 }
