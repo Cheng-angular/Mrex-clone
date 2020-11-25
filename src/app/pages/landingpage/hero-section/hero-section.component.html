@@ -66,6 +66,8 @@
   >
     <video
       preload="auto"
+      oncanplay="this.play()"
+      onloadedmetadata="this.muted = true"
       autoplay=""
       loop=""
       style="
