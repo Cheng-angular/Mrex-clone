@@ -30,6 +30,17 @@ export class AppComponent implements OnInit {
     }
   }
 
+  onActivate(event: any) :void {
+    let scrollToTop = window.setInterval(() => {
+      let pos = window.pageYOffset;
+      if(pos > 0) {
+        window.scrollTo(0, pos - 20);
+      } else {
+        window.clearInterval(scrollToTop);
+      }
+    }, 10);
+    window.scroll(0, 0);
+  }
   public changeLang() {
     const lang_value = document.getElementById('setlang_btn');
     

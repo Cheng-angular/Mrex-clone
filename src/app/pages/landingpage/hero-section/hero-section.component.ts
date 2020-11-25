@@ -15,14 +15,14 @@ export class HeroSectionComponent implements OnInit {
     const options = {
       strings: [
         'All-in-one platform for smarter Investing', 
-        'All-in-one platform for smarter Trading', 
         'All-in-one platform for smarter Anlytics', 
-        'All-in-one platform for smarter Messaging'
+        'All-in-one platform for smarter Acquisitions', 
+        'All-in-one platform for smarter Portfolio Management'
       ],
-      typeSpeed: 70,
-      backSpeed: 70,
-      backDelay:500,
-      startDelay: 1000,
+      typeSpeed: 60,
+      backSpeed: 60,
+      backDelay:400,
+      startDelay: 900,
       CursorChar: false,
       smartBakcspace: true,
       loop:true

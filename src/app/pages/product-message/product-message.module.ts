@@ -8,13 +8,22 @@ import { MessageDarkComponent } from './sections/message-dark/message-dark.compo
 import { MessageWideComponent } from './sections/message-wide/message-wide.component';
 import { MessagewMobileComponent } from './sections/messagew-mobile/messagew-mobile.component';
 import { MessageTodayComponent } from './sections/message-today/message-today.component';
+import { TransServiceModule } from 'src/app/trans-service/trans-service.module';
 
 
 @NgModule({
-  declarations: [ProductMessageComponent, MessageHeroComponent, MessageDarkComponent, MessageWideComponent, MessagewMobileComponent, MessageTodayComponent],
+  declarations: [
+    ProductMessageComponent, 
+    MessageHeroComponent, 
+    MessageDarkComponent, 
+    MessageWideComponent, 
+    MessagewMobileComponent, 
+    MessageTodayComponent
+  ],
   imports: [
     CommonModule,
-    ProductMessageRoutingModule
+    ProductMessageRoutingModule,
+    TransServiceModule
   ]
 })
 export class ProductMessageModule { }

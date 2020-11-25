@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LandingpageComponent implements OnInit {
 
-  constructor(public translate: TranslateService) { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
   }

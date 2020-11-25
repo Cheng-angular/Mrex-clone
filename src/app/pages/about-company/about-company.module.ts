@@ -9,14 +9,24 @@ import { AboutusContactsComponent } from './sections/aboutus-contacts/aboutus-co
 import { AboutusQuestionsComponent } from './sections/aboutus-questions/aboutus-questions.component';
 import { AboutCompanyComponent } from './about-company.component';
 import { AboutusHeroComponent } from './sections/aboutus-hero/aboutus-hero.component';
+import { TransServiceModule } from 'src/app/trans-service/trans-service.module';
 
 
 
 @NgModule({
-  declarations: [AboutCompanyComponent, AboutusOVerviewComponent, AboutusTeamComponent, AboutusValuesComponent, AboutusContactsComponent, AboutusQuestionsComponent, AboutusHeroComponent],
+  declarations: [
+    AboutCompanyComponent, 
+    AboutusOVerviewComponent, 
+    AboutusTeamComponent, 
+    AboutusValuesComponent, 
+    AboutusContactsComponent, 
+    AboutusQuestionsComponent, 
+    AboutusHeroComponent
+  ],
   imports: [
     CommonModule,
-    AboutCompanyRoutingModule
+    AboutCompanyRoutingModule,
+    TransServiceModule
   ]
 })
 export class AboutCompanyModule { }

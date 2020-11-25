@@ -1,17 +1,51 @@
 {
     "header": {
-        "products": "products",
+        "feature": "feature",
         "product_terminal": "terminal",
         "product_tradelab": "tradelab",
         "product_messenger": "messenger",
+        "p_term_text": "Pro analytical tools for smarter trading decisions",
+        "p_trade_text": "Bot Builder, Live Trading, Marketplace",
+        "p_message_text": "Communication tool for the global financial community",
         "aboutus": "about us",
         "aboutus_company": "company",
         "aboutus_career": "career",
         "aboutus_investorinfo": "investor information",
+        "a_company_text": "Learn more about the company and team",
+        "a_career_text": "Want to become a part of Darqube team?",
+        "a_invest_text": "Your investing opportunities in Darqube",
         "research": "research",
         "pricing": "pricing",
         "login": "log in",
+        "contactus": "contact us",
         "signup": "signup",
         "lang": "Français"
+    },
+
+    "landingpage": {
+        "hero": {
+            
+        },
+        "main_term": {
+
+        },
+        "main_trade": {
+
+        },
+        "main_message": {
+
+        },
+        "about": {
+
+        },
+        "icon": {
+
+        },
+        "mobile": {
+            
+        },
+        "main_today":{
+
+        }
     }
 }

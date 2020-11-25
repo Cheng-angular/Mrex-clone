@@ -9,6 +9,7 @@ import { TermWideSectionComponent } from './term-wide-section/term-wide-section.
 import { TermZeroSectionComponent } from './term-zero-section/term-zero-section.component';
 import { TermTodaySectionComponent } from './term-today-section/term-today-section.component';
 import { ProductTerminalComponent } from './product-terminal.component';
+import { TransServiceModule } from 'src/app/trans-service/trans-service.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ProductTerminalComponent } from './product-terminal.component';
   ],
   imports: [
     CommonModule,
-    ProductTerminalRoutingModule
+    ProductTerminalRoutingModule,
+    TransServiceModule
   ]
 })
 export class ProductTerminalModule { }

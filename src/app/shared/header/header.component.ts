@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   mobiledropdown: Boolean;
   aboutnavshow: Boolean;
   productsnavshow: Boolean;
+  toggleheader = true;
+  scrollposzero: Boolean;
   langs = ['en', 'fr'];
 
   constructor(public translate: TranslateService) {
@@ -19,19 +21,26 @@ export class HeaderComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    const currLang = this.translate.getBrowserLang();
-    switch (currLang) {
-      case 'en': {
-        this.translate.use(this.langs[0]);
-        break;
-      }
-      case 'fr': {
-        this.translate.use(this.langs[1]);
-        break;
-      }
-    }
+    this.scrollposzero = true;
+    this.scrollEffect();
   }
 
+   scrollEffect() {
+    let scrollPos = 0;
+     window.addEventListener("scroll", (event) => {
+      if ((document.body.getBoundingClientRect()).top == 0) {
+        this.scrollposzero = true;
+      } else if(document.body.getBoundingClientRect().top > scrollPos ) {
+        scrollPos = (document.body.getBoundingClientRect()).top;
+        this.scrollposzero = false;
+        this.toggleheader = true;
+      } else if(document.body.getBoundingClientRect().top < scrollPos ) {
+        scrollPos = (document.body.getBoundingClientRect()).top;
+        this.toggleheader = false;
+        console.log("Down");
+      }
+    })
+  }
   enterProduct() {
     this.abouttoggle = false;
     this.producttoggle = true;

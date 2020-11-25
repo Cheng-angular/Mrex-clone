@@ -20,13 +20,21 @@
         class="burger-dropdown-list w-dropdown-list"
         [ngClass]="{ 'w--open': aboutnavshow == true }"
       >
-        <a href="about.html" class="burger-drop-link w-dropdown-link">Company</a
-        ><a href="careers.html" class="burger-drop-link w-dropdown-link"
-          >Careers</a
-        ><a
-          href="investor-information.html"
+        <a
+          routerLink="/about-company"
           class="burger-drop-link w-dropdown-link"
-          >Investor Information</a
+          routerLinkActive="w--current"
+          >{{ "header.aboutus_company" | translate }}</a
+        ><a
+          routerLink="/about-career"
+          class="burger-drop-link w-dropdown-link"
+          routerLinkActive="w--current"
+          >{{ "header.aboutus_career" | translate }}</a
+        ><a
+          routerLink="/about-investor"
+          class="burger-drop-link w-dropdown-link"
+          routerLinkActive="w--current"
+          >{{ "header.aboutus_investorinfo" | translate }}</a
         >
       </nav>
     </div>
@@ -35,7 +43,7 @@
         class="burger-drop-menu-toggle w-dropdown-toggle"
         (click)="burgerProductDropdown()"
       >
-        <div>Products</div>
+        <div>{{ "header.products" | translate }}</div>
         <img
           src="../../../assets/images/5da9f6e53b1af8f6b3417511_arrow_down.svg"
           alt=""
@@ -46,30 +54,51 @@
         class="burger-dropdown-list w-dropdown-list"
         [ngClass]="{ 'w--open': productsnavshow == true }"
       >
-        <a href="terminal.html" class="burger-drop-link w-dropdown-link"
-          >Terminal</a
-        ><a href="tradelab.html" class="burger-drop-link w-dropdown-link"
-          >Tradelab</a
-        ><a href="messenger.html" class="burger-drop-link w-dropdown-link"
-          >Messenger</a
+        <a
+          routerLink="/product-terminal"
+          class="burger-drop-link w-dropdown-link"
+          routerLinkActive="w--current"
+          >{{ "header.product_terminal" | translate }}</a
+        ><a
+          routerLink="/product-tradelab"
+          class="burger-drop-link w-dropdown-link"
+          routerLinkActive="w--current"
+          >{{ "header.product_tradelab" | translate }}</a
+        ><a
+          routerLink="/product-message"
+          class="burger-drop-link w-dropdown-link"
+          routerLinkActive="w--current"
+          >{{ "header.product_messenger" | translate }}</a
         >
       </nav>
     </div>
-    <a href="research.html" class="burger-menu-item">Research</a
-    ><a href="pricing.html" class="burger-menu-item">Pricing</a
-    ><a href="b2b.html" class="burger-menu-item">B2b Solutions</a
-    ><a href="contact-us.html" class="burger-menu-item">Contact us</a>
+    <a
+      routerLink="/research"
+      routerLinkActive="w--current"
+      class="burger-menu-item"
+      >{{ "header.research" | translate }}</a
+    ><a
+      routerLink="/pricing"
+      routerLinkActive="w--current"
+      class="burger-menu-item"
+      >{{ "header.pricing" | translate }}</a
+    ><a
+      routerLink="/contact"
+      routerLinkActive="w--current"
+      class="burger-menu-item"
+      >{{ "header.contactus" | translate }}</a
+    >
     <div class="burger-login-wrapper">
       <a
         href="https://app.darqube.io/auth?redirect=/terminal"
         target="_blank"
         class="header-login-link"
-        >Log in</a
+        >{{ "header.login" | translate }}</a
       ><a
         href="https://app.darqube.io/auth/sign_up?redirect=/terminal"
         target="_blank"
         class="header-signup-button w-inline-block"
-        ><div>Sign up</div></a
+        ><div>{{ "header.signup" | translate }}</div></a
       >
     </div>
     <div class="burger-social-wrapper">
@@ -111,7 +140,16 @@
 </div>
 <div
   class="header-section"
-  [ngClass]="{ 'header-active': producttoggle == true || abouttoggle == true }"
+  data-aos="fade-down"
+  data-aos-easing="ease-in-sine"
+  data-aos-delay="300"
+  data-aos-duration="300"
+  *ngIf="toggleheader || producttoggle || abouttoggle"
+  [ngClass]="[
+    (!scrollposzero && toggleheader) || producttoggle || abouttoggle
+      ? 'header-active'
+      : 'header-deactive'
+  ]"
 >
   <div class="header-container">
     <a
@@ -127,10 +165,10 @@
       ></div
     ></a>
     <div class="header-menu-wrapper">
-      <a href="#" class="menu-item w-inline-block"
+      <a class="menu-item w-inline-block"
         ><div class="dropdown-menu-toggle" (mouseenter)="enterProduct()">
           <div [ngClass]="{ 'reduce-opacity': producttoggle == true }">
-            Products
+            {{ "header.feature" | translate }}
           </div>
           <img
             src="../../../assets/images/5da9f6e53b1af8f6b3417511_arrow_down.svg"
@@ -139,7 +177,7 @@
             [ngClass]="{ 'rotate-icon': producttoggle == true }"
           /></div
       ></a>
-      <a href="#" class="menu-item w-inline-block"
+      <a class="menu-item w-inline-block"
         ><div class="dropdown-menu-toggle" (mouseenter)="enterAbout()">
           <div [ngClass]="{ 'reduce-opacity': abouttoggle == true }">
             {{ "header.aboutus" | translate }}
@@ -149,18 +187,28 @@
             alt=""
             class="dropdown-arrow"
             [ngClass]="{ 'rotate-icon': abouttoggle == true }"
-          /></div></a
-      ><a routerLink="/resarch" class="menu-item">research</a
-      ><a routerLink="/pricing" class="menu-item">Pricing</a
-      ><a routerLink="/contact" class="menu-item">Contact us</a>
+          /></div
+      ></a>
+      <!-- <a routerLink="/research" class="menu-item">{{
+        "header.research" | translate
+      }}</a
+      ><a routerLink="/pricing" class="menu-item">{{
+        "header.pricing" | translate
+      }}</a
+      > -->
+      <a routerLink="/contact" class="menu-item">{{
+        "header.contactus" | translate
+      }}</a>
     </div>
     <div class="header-login-wrapper">
-      <a routerLink="/login" target="_blank" class="header-login-link">Log in</a
+      <a routerLink="/login" target="_blank" class="header-login-link">{{
+        "header.login" | translate
+      }}</a
       ><a
         routerLink="/signup"
         target="_blank"
         class="header-signup-button w-inline-block"
-        ><div>Sign up</div></a
+        ><div>{{ "header.signup" | translate }}</div></a
       >
       <button
         (click)="changeLang()"
@@ -196,7 +244,7 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Terminal</div>
+          <div>{{ "header.product_terminal" | translate }}</div>
           <img
             src="../../../assets/images/5db85a61a8bd4e00c6766c9c_circle_red.svg"
             alt=""
@@ -204,7 +252,7 @@
           />
         </div>
         <div class="header-menu-item-text">
-          Pro analytical tools for smarter trading decisions
+          {{ "header.p_term_text" | translate }}
         </div>
       </div></a
     ><a
@@ -222,7 +270,7 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Tradelab</div>
+          <div>{{ "header.product_tradelab" | translate }}</div>
           <img
             src="../../../assets/images/5daae563feb49a34b9c5543a_tradelab_qube.svg"
             alt=""
@@ -230,7 +278,7 @@
           />
         </div>
         <div class="header-menu-item-text">
-          Bot Builder, Live Trading, Marketplace
+          {{ "header.p_trade_text" | translate }}
         </div>
       </div></a
     ><a
@@ -247,7 +295,7 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Messenger</div>
+          <div>{{ "header.product_messenger" | translate }}</div>
           <img
             src="../../../assets/images/5daae5638d1d7c13f27f36fe_messenger_qube.svg"
             alt=""
@@ -255,7 +303,7 @@
           />
         </div>
         <div class="header-menu-item-text">
-          Communication tool for the global financial community
+          {{ "header.p_message_text" | translate }}
         </div>
       </div></a
     >
@@ -279,10 +327,10 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Company</div>
+          <div>{{ "header.aboutus_company" | translate }}</div>
         </div>
         <div class="header-menu-item-text">
-          Learn more about the company and team
+          {{ "header.a_company_text" | translate }}
         </div>
       </div>
     </a>
@@ -301,10 +349,10 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Careers</div>
+          <div>{{ "header.aboutus_career" | translate }}</div>
         </div>
         <div class="header-menu-item-text">
-          Want to become a part of Darqube team?
+          {{ "header.a_career_text" | translate }}
         </div>
       </div></a
     ><a
@@ -321,31 +369,12 @@
             alt=""
             class="menu-terminal-icon"
           />
-          <div>Investor information</div>
+          <div>{{ "header.aboutus_investorinfo" | translate }}</div>
         </div>
         <div class="header-menu-item-text">
-          Your investing opportunities in Darqube
+          {{ "header.a_invest_text" | translate }}
         </div>
       </div></a
     >
-  </div>
-  <div class="about-nav-section header">
-    <div
-      data-collapse="small"
-      data-animation="default"
-      data-duration="400"
-      role="banner"
-      class="about-navbar w-nav"
-    >
-      <div class="about-nav-container w-container">
-        <nav role="navigation" class="w-nav-menu">
-          <a href="#" class="nav-menu-item first w-nav-link">Overview</a
-          ><a href="#" class="nav-menu-item w-nav-link">Team</a
-          ><a href="#" class="nav-menu-item w-nav-link">Values</a
-          ><a href="#" class="nav-menu-item w-nav-link">Contacts</a
-          ><a href="#" class="nav-menu-item w-nav-link">Questions</a>
-        </nav>
-      </div>
-    </div>
   </div>
 </div>

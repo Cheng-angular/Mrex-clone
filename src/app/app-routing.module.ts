@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'about-career', loadChildren: () => import('./pages/about-careers/about-careers.module').then( m => m.AboutCareersModule)},
   { path: 'about-investor', loadChildren: () => import('./pages/about-investor/about-investor.module').then( m => m.AboutInvestorModule)},
   
-  { path: 'resarch', component: ResearchComponent},
+  { path: 'research', component: ResearchComponent},
   { path: 'pricing', component: PricingComponent},
   { path: 'contact', component: ContactusComponent},
   { path: 'login', component: LoginComponent},

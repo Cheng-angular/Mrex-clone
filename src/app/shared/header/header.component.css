@@ -7,13 +7,13 @@
 }
 
 .burger-active {
-        margin-right: 2px;
-        margin-left: 2px;
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-    background-image: url(../../../assets/images/5dc987055e5d7d9efd2961ef_exit.svg);
+    margin-right: 2px;
+    margin-left: 2px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+background-image: url(../../../assets/images/5dc987055e5d7d9efd2961ef_exit.svg);
 }
 
 .w-dropdown-list {
