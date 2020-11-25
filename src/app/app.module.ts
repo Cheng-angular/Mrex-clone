@@ -15,12 +15,16 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TermConditionComponent } from './pages/term-condition/term-condition.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    TermConditionComponent,
+    PrivacyPolicyComponent,
    
   ],
   imports: [

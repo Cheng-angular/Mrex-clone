@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ContactusComponent } from './pages/contactus/contactus.component';
-import { LoginComponent } from './pages/login/login.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ResearchComponent } from './pages/research/research.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { TermConditionComponent } from './pages/term-condition/term-condition.component';
+
 
 const routes: Routes = [
   // { path: '', redirectTo: '', pathMatch: 'full'},
@@ -19,9 +20,8 @@ const routes: Routes = [
   
   { path: 'research', component: ResearchComponent},
   { path: 'pricing', component: PricingComponent},
-  { path: 'contact', component: ContactusComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'signup', component: SignupComponent},
+  { path: 'term-condition', component: TermConditionComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyComponent}
 
 
 ];

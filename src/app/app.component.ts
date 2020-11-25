@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
       if(pos > 0) {
-        window.scrollTo(0, pos - 20);
+        window.scrollTo(0, pos - 110);
       } else {
         window.clearInterval(scrollToTop);
       }
@@ -45,7 +45,6 @@ export class AppComponent implements OnInit {
     const lang_value = document.getElementById('setlang_btn');
     
     if(lang_value.textContent === 'Français') {
-      console.log(lang_value.textContent);
       this.translate.use(this.langs[1]);
     } else {
       this.translate.use(this.langs[0]);

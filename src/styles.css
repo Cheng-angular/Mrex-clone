@@ -2042,7 +2042,7 @@ html {
   .body {
     background-color: #f6f8f9; 
     font-family: Ubuntu, Helvetica, sans-serif;
-    color: #919293;
+    /* color: #919293; */
     font-size: 18px;
     line-height: 1.8em;
     font-weight: 300;

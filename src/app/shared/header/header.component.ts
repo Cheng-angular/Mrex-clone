@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,23 +13,24 @@ export class HeaderComponent implements OnInit {
   mobiledropdown: Boolean;
   aboutnavshow: Boolean;
   productsnavshow: Boolean;
-  toggleheader = true;
   scrollposzero: Boolean;
+  toggleheader = true;
   langs = ['en', 'fr'];
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private router: Router) {
     translate.addLangs(this.langs);
+    this.scrollposzero = true;
+    this.scrollEffect();
   }
 
   public ngOnInit(): void {
-    this.scrollposzero = true;
-    this.scrollEffect();
+    
   }
 
    scrollEffect() {
     let scrollPos = 0;
      window.addEventListener("scroll", (event) => {
-      if ((document.body.getBoundingClientRect()).top == 0) {
+      if ((document.body.getBoundingClientRect()).top >= 0 && (document.body.getBoundingClientRect()).top <= 110) {
         this.scrollposzero = true;
       } else if(document.body.getBoundingClientRect().top > scrollPos ) {
         scrollPos = (document.body.getBoundingClientRect()).top;
