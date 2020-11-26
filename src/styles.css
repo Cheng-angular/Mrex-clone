@@ -2444,7 +2444,7 @@ html {
     display: none;
     width: 21px;
     height: 16px;
-    background-image: url("./assets/images/5dadecd7f8739f2975d9d90f_burger_menu.svg");
+    /* background-image: url("./assets/images/5dadecd7f8739f2975d9d90f_burger_menu.svg"); */
     background-position: 0px 50%;
     background-repeat: no-repeat;
   }
