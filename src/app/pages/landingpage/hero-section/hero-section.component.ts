@@ -15,7 +15,7 @@ export class HeroSectionComponent implements OnInit {
     const options = {
       strings: [
         'All-in-one platform for smarter Investing', 
-        'All-in-one platform for smarter Anlytics', 
+        'All-in-one platform for smarter Analytics', 
         'All-in-one platform for smarter Acquisitions', 
         'All-in-one platform for smarter Portfolio Management'
       ],
