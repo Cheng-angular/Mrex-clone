@@ -3,7 +3,7 @@
   class="burger-menu-container"
   [ngClass]="{ 'burger-menu-active': mobiledropdown == true }"
 >
-  <div class="burger-menu-items-wrapper">
+  <!-- <div class="burger-menu-items-wrapper">
     <div class="burger-menu-item drop w-dropdown">
       <div
         class="burger-drop-menu-toggle w-dropdown-toggle"
@@ -135,7 +135,7 @@
         ></a>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="burger-menu-bg"></div>
 </div>
 <div
@@ -156,15 +156,15 @@
       href=""
       aria-current="page"
       class="header-logo w-inline-block w--current"
-    ></a
-    ><a class="burger-wrapper w-inline-block"
+    ></a>
+    <!-- <a class="burger-wrapper w-inline-block"
       ><div
         class="burger"
         (click)="dropdowntoggle()"
         [ngClass]="{ 'burger-active': mobiledropdown == true }"
       ></div
-    ></a>
-    <div class="header-menu-wrapper">
+    ></a> -->
+    <!-- <div class="header-menu-wrapper">
       <a class="menu-item w-inline-block"
         ><div class="dropdown-menu-toggle" (mouseenter)="enterProduct()">
           <div [ngClass]="{ 'reduce-opacity': producttoggle == true }">
@@ -189,17 +189,11 @@
             [ngClass]="{ 'rotate-icon': abouttoggle == true }"
           /></div
       ></a>
-      <!-- <a routerLink="/research" class="menu-item">{{
-        "header.research" | translate
-      }}</a
-      ><a routerLink="/pricing" class="menu-item">{{
-        "header.pricing" | translate
-      }}</a
-      > -->
+
       <a routerLink="/contact" class="menu-item">{{
         "header.contactus" | translate
       }}</a>
-    </div>
+    </div> -->
     <div class="header-login-wrapper">
       <a routerLink="/login" target="_blank" class="header-login-link">{{
         "header.login" | translate
@@ -220,7 +214,7 @@
     </div>
   </div>
   <div class="header-menu-bg"></div>
-  <div
+  <!-- <div
     [ngClass]="{
       'header-menu-divider-active': producttoggle == true || abouttoggle == true
     }"
@@ -376,5 +370,5 @@
         </div>
       </div></a
     >
-  </div>
+  </div> -->
 </div>
