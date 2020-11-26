@@ -87,7 +87,7 @@
       routerLinkActive="w--current"
       class="burger-menu-item"
       >{{ "header.contactus" | translate }}</a
-    >
+    > -->
     <div class="burger-login-wrapper">
       <a
         href="https://app.darqube.io/auth?redirect=/terminal"
@@ -101,7 +101,7 @@
         ><div>{{ "header.signup" | translate }}</div></a
       >
     </div>
-    <div class="burger-social-wrapper">
+    <!-- <div class="burger-social-wrapper">
       <div class="burger-social-links-container">
         <a
           href="https://www.facebook.com/DarQube-1474337082603015/"
@@ -134,8 +134,8 @@
           class="social-link telegram w-inline-block"
         ></a>
       </div>
-    </div>
-  </div> -->
+    </div> -->
+  </div>
   <div class="burger-menu-bg"></div>
 </div>
 <div
@@ -157,13 +157,13 @@
       aria-current="page"
       class="header-logo w-inline-block w--current"
     ></a>
-    <!-- <a class="burger-wrapper w-inline-block"
+    <a class="burger-wrapper w-inline-block"
       ><div
-        class="burger"
-        (click)="dropdowntoggle()"
+      
+        (mouseenter)="dropdowntoggle()"
         [ngClass]="{ 'burger-active': mobiledropdown == true }"
       ></div
-    ></a> -->
+    ></a>
     <!-- <div class="header-menu-wrapper">
       <a class="menu-item w-inline-block"
         ><div class="dropdown-menu-toggle" (mouseenter)="enterProduct()">
