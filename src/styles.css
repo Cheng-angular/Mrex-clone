@@ -1056,7 +1056,7 @@ a {
 .big-button.tiny {
   width: auto;
   max-width: none;
-  min-width: 120px;
+  min-width: 133px;
   padding-right: 2.5em;
   padding-left: 2.5em;
 }
@@ -1671,8 +1671,8 @@ a {
 }
 
 .main-trade-lab.img_1 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .main-tradelab.img_1 {
@@ -1683,8 +1683,8 @@ a {
 }
 
 .main-tradelab.img_2 {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .main-tradelab.img_2 {
@@ -1694,8 +1694,8 @@ a {
 }
 
 .main-tradelab.img_3 {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .main-tradelab.img_3 {
@@ -1705,8 +1705,8 @@ a {
 }
 
 .main-tradelab.img_4 {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .main-tradelab.img_4 {
@@ -1721,8 +1721,8 @@ a {
     transform: translateY(-10px);
   }
   50% {
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
   }
   100% {
     -webkit-transform: translateY(-10px);
@@ -1736,8 +1736,8 @@ a {
     transform: translateY(-10px);
   }
   50% {
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
   }
   100% {
     -webkit-transform: translateY(-10px);
@@ -8575,6 +8575,36 @@ a {
 .img_4 {
   left: -242px;
   bottom: -24px;
+}
+
+@keyframes phonepulse {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes phonepulse {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
 }
   .main-messenger {
     position: relative;
