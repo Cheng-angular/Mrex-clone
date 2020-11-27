@@ -52,7 +52,7 @@
         "mobile": {
             "m_sh_txt": "Bientôt sur mobile!",
             "m_s_txt": " Nous construisons une application mobile comme aucune autre avec tous les outils dont vous avez besoin lorsque vous êtes en déplacement",
-            "m_img_src": "../../../assets/images/5dab3a30f43e6fd4fedac938_mobile.png"
+            "m_img_src": "../../../assets/img/mrex_mobile.png"
         },
         "main_today":{
             "today_h_txt": "Commencer aujourd'hui",
