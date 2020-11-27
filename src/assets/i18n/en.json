@@ -38,7 +38,11 @@
         "main_trade": {
             "trade_sh_txt": "Evaluate & underwrite, model, compare!",
             "trade_s_txt": "All the features of the most powerful spreadsheets, with the simplicity and elegance to make everyday investors experts and experts addicted",
-            "trade_img_src": "../../../assets/img/feature/feature1/feature.png"
+            "trade_img_src1": "../../../assets/img/feature/feature1/EN/feature-1-1-en.png",
+            "trade_img_src_g": "../../../assets/img/feature/feature1/graph.png",
+            "trade_img_src2": "../../../assets/img/feature/feature1/EN/feature-1-2-en.png",
+            "trade_img_src3": "../../../assets/img/feature/feature1/EN/feature-1-3-en.png"
+
         },
         "main_message": {
             "mess_sh_txt":"Keep an eye on what matters",
