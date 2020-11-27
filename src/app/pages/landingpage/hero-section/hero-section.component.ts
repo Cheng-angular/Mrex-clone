@@ -10,15 +10,10 @@ import Typed from 'typed.js';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent implements OnInit {
-  languagevalue: Boolean;
+  languagevalue =  false;
   clickEventsubscription: Subscription;
-  englishoptions = {
-    strings: [
-      'All-in-one platform for smarter Investing', 
-      'All-in-one platform for smarter Analytics', 
-      'All-in-one platform for smarter Acquisitions', 
-      'All-in-one platform for smarter Portfolio Management'
-    ],
+  options = {
+    strings: [''],
     typeSpeed: 60,
     backSpeed: 60,
     backDelay:400,
@@ -29,32 +24,35 @@ export class HeroSectionComponent implements OnInit {
   }
   
   frenchsoptions = 
-  {
-    strings:[
+  [
       'Plateforme tout-en-un pour mieux investir',
       'Plateforme tout-en-un pour mieux analysers',
       'Plateforme tout-en-un pour mieux acquérir',
       'Plateforme tout-en-un pour gérer son portefeuille'
-    ],
-    typeSpeed: 60,
-    backSpeed: 60,
-    backDelay:400,
-    startDelay: 900,
-    CursorChar: false,
-    smartBakcspace: true,
-    loop:true
-  }
+    ];
+
+  englishoptions = [
+      'All-in-one platform for smarter Investing', 
+      'All-in-one platform for smarter Analytics', 
+      'All-in-one platform for smarter Acquisitions', 
+      'All-in-one platform for smarter Portfolio Management'
+  ];
   constructor(public translate: TranslateService, private sharedService: SharedService) { }
 
   ngOnInit(): void {
-    const tyed = new Typed('.typed',this.englishoptions);
+    this.options['strings'] = this.englishoptions;
+    let typed = new Typed('.typed',this.options);
     this.clickEventsubscription = this.sharedService.getClickEvent2().subscribe(() => {
       this.languagevalue = !this.languagevalue;
       if(this.languagevalue) {
-        this.englishoptions['loop'] = false;
-        return;
-      }
-      
+        typed.destroy();
+        this.options['strings'] = this.frenchsoptions;
+        typed = new Typed('.typed',this.options);
+      } else {
+        typed.destroy();
+        this.options['strings'] = this.englishoptions;
+        typed = new Typed('.typed',this.options);
+      }    
     })
   }
 
