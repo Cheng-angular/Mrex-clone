@@ -47,7 +47,8 @@
         "main_message": {
             "mess_sh_txt":"Keep an eye on what matters",
             "mess_s_txt": "Manage the financial metrics of your portfolio and each property, track performance and KPI's",
-            "mess_img_src": "../../../assets/images/5eda2b76c8019d6bd4ed2f7f_messenger_main_crop.png"
+            "mess_img_src1": "../../../assets/img/portfolio/portfolio_summary_en.png",
+            "mess_img_src2": "../../../assets/img/portfolio/portfolio_property_en.png"
         },
         "mobile": {
             "m_sh_txt": "Soon on mobile!",

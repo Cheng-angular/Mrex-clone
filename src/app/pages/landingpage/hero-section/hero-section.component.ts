@@ -25,17 +25,17 @@ export class HeroSectionComponent implements OnInit {
   
   frenchsoptions = 
   [
-      'Plateforme tout-en-un pour mieux investir',
-      'Plateforme tout-en-un pour mieux analysers',
-      'Plateforme tout-en-un pour mieux acquérir',
-      'Plateforme tout-en-un pour gérer son portefeuille'
-    ];
+    'Plateforme tout-en-un pour mieux investir',
+    'Plateforme tout-en-un pour mieux analysers',
+    'Plateforme tout-en-un pour mieux acquérir',
+    'Plateforme tout-en-un pour gérer son portefeuille'
+  ];
 
   englishoptions = [
-      'All-in-one platform for smarter Investing', 
-      'All-in-one platform for smarter Analytics', 
-      'All-in-one platform for smarter Acquisitions', 
-      'All-in-one platform for smarter Portfolio Management'
+    'All-in-one platform for smarter Investing', 
+    'All-in-one platform for smarter Analytics', 
+    'All-in-one platform for smarter Acquisitions', 
+    'All-in-one platform for smarter Portfolio Management'
   ];
   constructor(public translate: TranslateService, private sharedService: SharedService) { }
 

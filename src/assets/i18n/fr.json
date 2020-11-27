@@ -46,7 +46,8 @@
         "main_message": {
             "mess_sh_txt":"Gardez un œil sur ce qui compte",
             "mess_s_txt": " Gérez les métriques financières de votre portefeuille et de chaque propriété, suivez les performances et les indicateurs clés de performance",
-            "mess_img_src": "../../../assets/images/5eda2b76c8019d6bd4ed2f7f_messenger_main_crop.png"
+            "mess_img_src1": "../../../assets/img/portfolio/portfolio_summary_fr.png",
+            "mess_img_src2": "../../../assets/img/portfolio/portfolio_property_fr.png"
         },
         "mobile": {
             "m_sh_txt": "Bientôt sur mobile!",
