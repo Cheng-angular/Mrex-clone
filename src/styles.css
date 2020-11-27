@@ -1649,8 +1649,8 @@ a {
 }
 
 .img_1 {
-  left: 707px;
-    bottom: 80px;
+  left: 745px;
+  bottom: 86px;
 }
 .img_2 {
   left: 515px;
@@ -1658,11 +1658,12 @@ a {
 
 }
 .img_3 {
-  right: 415px;
+  right: 380px;
+  bottom: 15px;
 }
 .img_4 {
-  right: 700px;
-  bottom: -65px;
+  right: 673px;
+  bottom: -33px;
 }
 
 .main-tradelab {

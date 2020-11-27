@@ -7,7 +7,7 @@ import *as AOS from 'aos';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'daqurbeClone1';
+  title = 'MREX';
   langs = ['en', 'fr'];
   
   constructor(public translate: TranslateService) {
