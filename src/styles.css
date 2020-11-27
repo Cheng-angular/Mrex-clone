@@ -1,6 +1,6 @@
 
-html {
-  font-family: sans-serif;
+html, body {
+  font-family: 'Ubuntu', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -2165,7 +2165,7 @@ a {
 }
 
 .footer-logo {
-  width: 140px;
+  width: 120px;
   height: 80px;
   background-image: url("./assets/images/logo.png");
   background-position: 0px 0px;
@@ -8580,10 +8580,6 @@ a {
   .footer-logo {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-
-  .footer-menu-column {
-    display: none;
   }
 
   .footer-column-heading {

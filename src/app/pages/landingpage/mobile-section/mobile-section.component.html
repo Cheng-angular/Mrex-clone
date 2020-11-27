@@ -1,27 +1,19 @@
 <div class="section _100vh mobile">
-  <h2 class="features-heading">Soon on mobile!</h2>
+  <h2 class="features-heading">
+    {{ "landingpage.mobile.m_sh_txt" | translate }}
+  </h2>
   <div class="subheading">
     <p>
-      We are building a rockstar mobile application with all the tools you need
-      when you're on the go
+      {{ "landingpage.mobile.m_s_txt" | translate }}
     </p>
   </div>
   <div class="appstore-container">
     <a href="mobile-app.html" class="big-button black mobile w-inline-block"
-      ><div>JOIN WAITLIST</div></a
-    ><a href="#" class="appstore-shield w-inline-block"
-      ><img
-        src="../../../assets/images/5dab38ad4c72cc7d39e9a981_appstore.png"
-        alt=""
-    /></a>
+      ><div>{{ "header.waitlist_btn" | translate }}</div></a
+    >
   </div>
   <img
-    src="../../../assets/images/5dab3a30f43e6fd4fedac938_mobile.png"
-    sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 74vw"
-    srcset="
-      ../../../assets/images/5dab3a30f43e6fd4fedac938_mobile-p-500.png 500w,
-      ../../../assets/images/5dab3a30f43e6fd4fedac938_mobile.png       829w
-    "
+    src="{{ 'landingpage.mobile.m_img_src' | translate }}"
     alt=""
     class="mobile-3d"
     data-aos="fade-up"

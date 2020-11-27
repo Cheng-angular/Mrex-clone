@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-header',
@@ -15,16 +17,32 @@ export class HeaderComponent implements OnInit {
   productsnavshow: Boolean;
   scrollposzero: Boolean;
   toggleheader = true;
+  clickEventsubscription: Subscription;
   langs = ['en', 'fr'];
 
-  constructor(public translate: TranslateService, private router: Router) {
+  constructor(public translate: TranslateService, private router: Router, private sharedService: SharedService) {
     translate.addLangs(this.langs);
     this.scrollposzero = true;
     this.scrollEffect();
   }
 
   public ngOnInit(): void {
-    
+    this.clickEventsubscription = this.sharedService.getClickEvent().subscribe(() => {
+      this.gotoTermsPage();
+    })
+    this.clickEventsubscription = this.sharedService.getClickEvent1().subscribe(() => {
+      this.gotoPrivacyPage();
+    })
+  }
+
+  gotoTermsPage() {
+
+      alert(this.scrollposzero);
+
+  }
+
+  gotoPrivacyPage() {
+    this.router.navigate(['/privacy-policy']);
   }
 
    scrollEffect() {
@@ -39,7 +57,6 @@ export class HeaderComponent implements OnInit {
       } else if(document.body.getBoundingClientRect().top < scrollPos ) {
         scrollPos = (document.body.getBoundingClientRect()).top;
         this.toggleheader = false;
-        console.log("Down");
       }
     })
   }
@@ -79,8 +96,8 @@ export class HeaderComponent implements OnInit {
 
   public changeLang() {
     const lang_value = document.getElementById('setlang_btn');
+    this.sharedService.sendClickEvent2();
     if(lang_value.textContent === 'Français') {
-      console.log(lang_value.textContent);
       this.translate.use(this.langs[1]);
     } else {
       this.translate.use(this.langs[0]);

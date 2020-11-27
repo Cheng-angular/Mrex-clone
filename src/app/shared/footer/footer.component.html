@@ -5,21 +5,29 @@
         <div class="footer-column-heading">
           <div class="footer-logo"></div>
         </div>
-        <h4>Welcome to Real Estate 2.0!</h4>
-        <h4>Let's talk: <span style="color: #44c4ad">info@mrex.co</span></h4>
+        <h4>{{ "footer.welcome_txt" | translate }}</h4>
+        <h4>
+          {{ "footer.talk_info" | translate }}
+          <span style="color: #44c4ad">info@mrex.co</span>
+        </h4>
       </div>
     </div>
     <div class="footer-copyright-row">
-      <div class="footer-copyright-text">Copyright © 2020 MREX inc.</div>
+      <div class="footer-copyright-text">
+        {{ "footer.copy_txt" | translate }}
+      </div>
       <div class="footer-legal-links-container">
-        <a routerLink="/term-condition" class="footer-legal-link"
-          >Terms & Conditions - Disclaimer</a
-        ><a routerLink="/privacy-policy" class="footer-legal-link"
-          >Data Privacy</a
-        >
+        <a routerLink="/term-condition" class="footer-legal-link">{{
+          "footer.term_txt" | translate
+        }}</a
+        ><a routerLink="/privacy-policy" class="footer-legal-link">{{
+          "footer.privacy_txt" | translate
+        }}</a>
       </div>
       <div class="social-links-container">
-        <div class="footer-copyright-text">Follow us at:</div>
+        <div class="footer-copyright-text">
+          {{ "footer.follow_txt" | translate }}
+        </div>
         <a
           href="https://www.facebook.com/DarQube-1474337082603015/"
           target="_blank"

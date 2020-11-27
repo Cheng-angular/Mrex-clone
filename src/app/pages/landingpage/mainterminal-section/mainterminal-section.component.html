@@ -1,6 +1,6 @@
 <div class="section _100vh main_terminal">
   <h1 class="features-heading">
-    The MREX Terminal: the multifamily market in the palm of your hand
+    {{ "landingpage.main_term.term_h_txt" | translate }}
   </h1>
   <div class="feature-container">
     <div
@@ -11,25 +11,24 @@
       data-aos-duration="1000"
     >
       <img
-        src="../../../assets/images/feature-1-en.png"
+        src="{{ 'landingpage.main_term.term_img_src1' | translate }}"
         alt=""
         class="main-terminal"
       />
 
       <img
-        src="../../../assets/images/feature-2-en.png"
+        src="{{ 'landingpage.main_term.term_img_src2' | translate }}"
         alt=""
         class="main-terminal"
       />
     </div>
     <div class="feature-content-wrapper">
       <div class="product-label terminal">
-        <div>Terminal</div>
+        <div>{{ "header.feature_terminal" | translate }}</div>
       </div>
-      <h2>Deep Insights and better decisions</h2>
+      <h2>{{ "landingpage.main_term.term_sh_txt" | translate }}</h2>
       <p class="feature-text">
-        We give you the ultimate set of tools for analyzing the multifamily real
-        estate market and more effective investing
+        {{ "landingpage.main_term.term_s_txt" | translate }}
       </p>
     </div>
   </div>

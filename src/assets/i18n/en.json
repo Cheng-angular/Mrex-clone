@@ -1,9 +1,9 @@
 {
     "header": {
         "feature": "feature",
-        "product_terminal": "terminal",
-        "product_tradelab": "tradelab",
-        "product_messenger": "messenger",
+        "feature_terminal": "terminal",
+        "feature_tradelab": "tradelab",
+        "feature_portfolio": "portfolio",
         "p_term_text": "Pro analytical tools for smarter trading decisions",
         "p_trade_text": "Bot Builder, Live Trading, Marketplace",
         "p_message_text": "Communication tool for the global financial community",
@@ -19,33 +19,49 @@
         "login": "log in",
         "contactus": "contact us",
         "signup": "signup",
-        "lang": "Français"
+        "lang": "Français",
+        "waitlist_btn": "Join Waitlist"
     },
 
     "landingpage": {
         "hero": {
-            
+            "hero_subtxt": "Gain access to user-friendly institutional-grade tools to analyse the multifamily real estate market, automate your portfolio management and search potential acquisitions",
+            "video_btn_txt": "play video"
         },
         "main_term": {
-
+            "term_h_txt": "The MREX Terminal: the mutifamily market in the palm of your hand",
+            "term_sh_txt": "Deep insights and better decisions",
+            "term_s_txt": "We give you the ultimate set of tools for analyzing the multifamily real estate market and more effective investing",
+            "term_img_src1": "../../../assets/images/feature-1-en.png",
+            "term_img_src2": "../../../assets/images/feature-2-en.png"
         },
         "main_trade": {
-
+            "trade_sh_txt": "Evaluate & underwrite, model, compare!",
+            "trade_s_txt": "All the features of the most powerful spreadsheets, with the simplicity and elegance to make everyday investors experts and experts addicted",
+            "trade_img_src": "../../../assets/img/feature/feature1/feature.png"
         },
         "main_message": {
-
-        },
-        "about": {
-
-        },
-        "icon": {
-
+            "mess_sh_txt":"Keep an eye on what matters",
+            "mess_s_txt": "Manage the financial metrics of your portfolio and each property, track performance and KPI's",
+            "mess_img_src": "../../../assets/images/5eda2b76c8019d6bd4ed2f7f_messenger_main_crop.png"
         },
         "mobile": {
-            
+            "m_sh_txt": "Soon on mobile!",
+            "m_s_txt": "We are building a rokstar mobile application with all the tools you need when you're on the go",
+            "m_img_src": "../../../assets/images/5dab3a30f43e6fd4fedac938_mobile.png"
         },
         "main_today":{
-
+            "today_h_txt": "Get started today",
+            "today_s_txt": "Our missionis to democratize access to the multifamily real estate investment market by empowering the average investor to become a sophisticated one through innovative technology and deep market intelligence"
         }
+    },
+
+    "footer": {
+        "welcome_txt": "Welcome to Real Estate 2.0!",
+        "talk_info": "Let's talk",
+        "copy_txt": "Copyright © 2020 MREX inc",
+        "term_txt": "Terms & Conditions - Disclaimer",
+        "privacy_txt": "Data Privacy",
+        "follow_txt": "follow us at:"
     }
 }

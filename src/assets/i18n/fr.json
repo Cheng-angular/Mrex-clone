@@ -1,25 +1,67 @@
 {
     "header": {
-        "feature": "xxxxxxx",
-        "product_terminal": "qqqqqq",
-        "product_tradelab": "wwwwww",
-        "product_messenger": "eeeeee",
-        "p_term_text": "Orp lacitylana tools for smarter trading decisions",
+        "feature": "Fonctionnalités",
+        "feature_terminal": "terminale",
+        "feature_tradelab": "tradelab",
+        "feature_portfolio": "portefeuille",
+        "p_term_text": "Pro analytical tools for smarter trading decisions",
         "p_trade_text": "Bot Builder, Live Trading, Marketplace",
         "p_message_text": "Communication tool for the global financial community",
-        "aboutus": "yyyyyyy",
-        "aboutus_company": "rrrrrr",
-        "aboutus_career": "ttttttt",
-        "aboutus_investorinfo": "uuuuuuuuuu",
+        "aboutus": "about us",
+        "aboutus_company": "company",
+        "aboutus_career": "career",
+        "aboutus_investorinfo": "investor information",
         "a_company_text": "Learn more about the company and team",
         "a_career_text": "Want to become a part of Darqube team?",
         "a_invest_text": "Your investing opportunities in Darqube",
-        "research": "zzzzzz",
-        "pricing": "aaaaaaaa",
-        "contactus": "iiiiiiii",
-        "login": "oooooo",
-        "signup": "ppppppp",
-        "lang": "zzzzzzzz"
-    }
+        "research": "research",
+        "pricing": "pricing",
+        "login": "s'identifier",
+        "contactus": "contact us",
+        "signup": "s'inscrire",
+        "lang": "English",
+        "waitlist_btn": "LISTE D'ATTENTE"
+    },
 
+    "landingpage": {
+        "hero": {
+            "hero_subtxt": "Accédez à des outils conviviaux de qualité institutionnelle pour analyser le marché immobilier multirésidentiel, automatiser la gestion de votre portefeuille et trouver des acquisitions potentielles",
+            "video_btn_txt": "Visionner"
+        },
+        "main_term": {
+            "term_h_txt": "Le terminal MREX: Le marché multilogement à portée de main",
+            "term_sh_txt": "Une perspectives approfondie et des meilleures décisions",
+            "term_s_txt": "Nous vous fournissons l'ensemble ultime d'outils pour analyser le marché immobilier multirésidentiel et investir plus efficacement",
+            "term_img_src1": "../../../assets/images/feature-1-en.png",
+            "term_img_src2": "../../../assets/images/feature-2-en.png"
+        },
+        "main_trade": {
+            "trade_sh_txt": "Évaluez et souscrivez, modélisez, comparez!",
+            "trade_s_txt": "Toutes les fonctionnalités des chiffriers les plus puissants, avec la simplicité et l'élégance pour rendre les investisseurs de tous les jours des experts et des experts accros.",
+            "trade_img_src": "../../../assets/img/feature/feature1/feature.png"
+        },
+        "main_message": {
+            "mess_sh_txt":"Gardez un œil sur ce qui compte",
+            "mess_s_txt": " Gérez les métriques financières de votre portefeuille et de chaque propriété, suivez les performances et les indicateurs clés de performance",
+            "mess_img_src": "../../../assets/images/5eda2b76c8019d6bd4ed2f7f_messenger_main_crop.png"
+        },
+        "mobile": {
+            "m_sh_txt": "Bientôt sur mobile!",
+            "m_s_txt": " Nous construisons une application mobile comme aucune autre avec tous les outils dont vous avez besoin lorsque vous êtes en déplacement",
+            "m_img_src": "../../../assets/images/5dab3a30f43e6fd4fedac938_mobile.png"
+        },
+        "main_today":{
+            "today_h_txt": "Commencer aujourd'hui",
+            "today_s_txt": "Notre mission est de démocratiser l’accès au marché de l’investissement immobilier multilogement en en offrant la capacité à l’investisseur moyen d’en devenir un sophistiqué avec une technologie innovante et d’une intelligence d’affaires réfléchie"
+        }
+    },
+
+    "footer": {
+        "welcome_txt": "Bienvenue dans l’ère de l'Immobilier 2.0",
+        "talk_info": "Parlons",
+        "copy_txt": "Droits d'auteur © 2019 MREX Inc.",
+        "term_txt": "Termes et conditions - Disclaimer",
+        "privacy_txt": "Politique de confidentialité",
+        "follow_txt": "Suivez nous sur:"
+    }
 }
