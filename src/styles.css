@@ -834,6 +834,11 @@ a {
   color: #fff;
 }
 
+.lang_btn {
+  margin-left: 10px;
+  background-color: #22a180;
+  color: white;
+}
 .hero-text-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
