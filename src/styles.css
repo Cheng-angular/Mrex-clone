@@ -8274,10 +8274,6 @@ a {
     margin-left: auto;
   }
 
-
-
- 
-
   .typed {
     max-width: 460px;
     min-height: 110px;
@@ -8321,7 +8317,11 @@ a {
   }
 
   .header-login-wrapper {
-    display: none;
+    margin-right: 15px;
+  }
+
+  .header-signup-button {
+    padding: 5px 5px;
   }
 
   .menu-item {
