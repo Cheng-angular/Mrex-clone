@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-term-condition',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermConditionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     window.scroll(0, 0);
