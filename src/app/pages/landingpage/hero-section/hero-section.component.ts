@@ -26,7 +26,7 @@ export class HeroSectionComponent implements OnInit {
   frenchsoptions = 
   [
     'Plateforme tout-en-un pour mieux investir',
-    'Plateforme tout-en-un pour mieux analysers',
+    'Plateforme tout-en-un pour mieux analyser',
     'Plateforme tout-en-un pour mieux acquérir',
     'Plateforme tout-en-un pour gérer son portefeuille'
   ];
