@@ -1611,10 +1611,8 @@ a {
 
 .feature-image-container.main_messenger {
   z-index: 100;
-    margin-top: -22px;
-
-    max-width: 500px;
-    justify-content: left;
+  max-width: 700px;
+  justify-content: left;
 }
 
 .feature-image-container.tradelab {
@@ -1753,11 +1751,44 @@ a {
   top: 1%;
   bottom: auto;
   z-index: 100;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
+  width: 120%;
+  max-width: 700px;
 }
 
+.main-messenger {
+  -webkit-animation: phonepulse 7s ease-in-out infinite;
+  animation: phonepulse 7s ease-in-out infinite;
+}
+
+.main-messenger.img-left {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.main-tradelab.img-left {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-messenger.img-right {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.main-messenger.img-right {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.img-left {
+
+}
+.img-right {
+  position: relative;
+    right: 170px;
+    top: 50px;
+}
 .video-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7703,7 +7734,7 @@ a {
     top: auto;
     right: auto;
     bottom: -4%;
-    width: 129%;
+    width: 140%;
   }
 
   .video-wrapper {
@@ -8530,6 +8561,7 @@ a {
     overflow: visible;
     margin-bottom: -34px;
     padding-bottom: 0%;
+    min-width: 180px;
   }
 
   .feature-image-container.tradelab {
@@ -8609,11 +8641,8 @@ a {
 }
   .main-messenger {
     position: relative;
-    left: 0%;
+    left: -17%;
     top: 0px;
-    max-width: 150px;
-    min-width: 150px;
-    border-radius: 10px;
   }
 
   .video-wrapper {
