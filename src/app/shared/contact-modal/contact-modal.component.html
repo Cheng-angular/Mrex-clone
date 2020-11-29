@@ -1,0 +1,98 @@
+<div *ngIf="modaltoggle" class="modal-container">
+  <div
+    class="modal-window"
+    data-aos="zoom-in"
+    data-aos-easing="ease-in-sine"
+    data-aos-delay="300"
+    data-aos-duration="300"
+  >
+    <a class="close-icon-modal" (click)="closeModal()">+</a>
+    <div id="Feedback-Form" class="w-form">
+      <form [formGroup]="joinForm" name="Required form to Join WaitList">
+        <div class="feedback-heading">Leave a message</div>
+        <input
+          type="text"
+          class="feedback-input w-input"
+          maxlength="256"
+          name="name"
+          placeholder="Your Name"
+          formControlName="username"
+        />
+        <div
+          *ngIf="
+            joinForm.controls['username'].invalid &&
+            (joinForm.controls['username'].dirty ||
+              joinForm.controls['username'].touched)
+          "
+          class="email-valid"
+        >
+          <small class="error">Username is required!</small>
+        </div>
+        <input
+          type="email"
+          class="feedback-input w-input"
+          maxlength="256"
+          name="email"
+          formControlName="email"
+          placeholder="E-mail address"
+        />
+        <div
+          *ngIf="
+            joinForm.controls['email'].invalid &&
+            (joinForm.controls['email'].dirty ||
+              joinForm.controls['email'].touched)
+          "
+          class="email-valid"
+        >
+          <small *ngIf="joinForm.controls.email.errors.required" class="error">
+            User Email is required!
+          </small>
+          <small *ngIf="joinForm.controls.email.errors.pattern" class="error">
+            Please provide a valid Email address!
+          </small>
+        </div>
+
+        <textarea
+          id="Message"
+          name="message"
+          placeholder="Your message"
+          maxlength="5000"
+          formControlName="message"
+          class="feedback-input textarea w-input"
+        >
+        </textarea>
+        <div
+          *ngIf="
+            joinForm.controls['message'].invalid &&
+            (joinForm.controls['message'].dirty ||
+              joinForm.controls['message'].touched)
+          "
+          class="email-valid"
+        >
+          <small class="error">Message is required!</small>
+        </div>
+
+        <button
+          value="Submit"
+          class="big-button w-button"
+          (click)="onSubmit()"
+          [disabled]="joinForm.pristine || joinForm.invalid"
+        >
+          Submit
+        </button>
+      </form>
+      <div class="feedback-success w-form-done">
+        <img
+          src="../../../assets/images/5dc9a12247ea211f0c2730ad_check.png"
+          alt=""
+          class="success-icon"
+        />
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="feedback-error w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-container-mask"></div>
+</div>

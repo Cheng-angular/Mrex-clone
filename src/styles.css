@@ -189,11 +189,17 @@ input[type="reset"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-button[disabled],
+
 html input[disabled] {
   cursor: default;
 }
+button {
+  cursor: pointer;
+}
 
+button[disabled] {
+  cursor: not-allowed;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -966,11 +972,16 @@ a {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .big-button:hover {
   background-color: #05b183;
   color: #fff;
+}
+
+.big-button:focus {
+  outline: none;
 }
 
 .big-button.black {
@@ -5212,8 +5223,22 @@ a {
   font-size: 1.7em;
   line-height: 0.1em;
   text-decoration: none;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  position: relative;
+  bottom: 30px;
+  text-align: center;
 }
 
+.email-valid {
+  height: 0;
+}
+
+.feedback-heading {
+  color: white;
+}
 .modal-container {
   position: fixed;
   left: 0px;
@@ -5221,7 +5246,7 @@ a {
   right: 0px;
   bottom: 0px;
   z-index: 21000;
-  display: none;
+  display: flex;
   width: 100%;
   height: 100%;
   -webkit-box-pack: center;
@@ -5234,6 +5259,127 @@ a {
   align-items: center;
 }
 
+.modal-container-mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 20000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(29, 29, 31, 0.62);
+}
+
+.input-field:focus {
+  color: #919293;
+}
+
+.feedback-input {
+  width: 100%;
+  margin-bottom: 25px;
+  padding-left: 2px;
+  border-style: none none solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #222;
+  background-color: transparent;
+  color: #818080;
+  font-size: 1em;
+}
+.w-input:focus, .w-select:focus {
+  border-color: #3898EC;
+  outline: 0;
+}
+
+.feedback-input::-webkit-input-placeholder {
+  color: #545454;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.feedback-input:-ms-input-placeholder {
+  color: #545454;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.feedback-input::-ms-input-placeholder {
+  color: #545454;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.feedback-input::placeholder {
+  color: #545454;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+textarea {
+  overflow: auto;
+}
+
+textarea.w-input,textarea.w-select{height:auto}
+
+.feedback-input.textarea {
+  height: 8em;
+}
+
+.feedback-input::-webkit-input-placeholder {
+  font-size: 1em;
+}
+
+.feedback-input:-ms-input-placeholder {
+  font-size: 1em;
+}
+
+.feedback-input::-ms-input-placeholder {
+  font-size: 1em;
+}
+
+.feedback-input::placeholder {
+  font-size: 1em;
+}
+
+.input-field {
+  margin-bottom: 0px;
+  border: 1px none #000;
+  border-radius: 4px;
+  background-color: #191f21;
+}
+
+.input-field:focus {
+  color: #919293;
+}
+
+.input-field::-webkit-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.15);
+}
+
+.input-field:-ms-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.15);
+}
+
+.input-field::-ms-input-placeholder {
+  color: hsla(0, 0%, 100%, 0.15);
+}
+
+.input-field::placeholder {
+  color: hsla(0, 0%, 100%, 0.15);
+}
+
+.feedback-input {
+  font-size: 0.9em;
+}
 .modal-container.roman {
   display: none;
 }

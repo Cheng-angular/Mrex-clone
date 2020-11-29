@@ -56,4 +56,8 @@ export class HeroSectionComponent implements OnInit {
     })
   }
 
+  goToWaitList() {
+    this.sharedService.sendClickEventtoWaitList();
+  }
+
 }

@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageModule } from './pages/landingpage/landingpage.module';
@@ -12,11 +16,9 @@ import { ResearchModule } from './pages/research/research.module';
 import { ContactusModule } from './pages/contactus/contactus.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TermConditionComponent } from './pages/term-condition/term-condition.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ContactModalComponent } from './shared/contact-modal/contact-modal.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
     FooterComponent,
     TermConditionComponent,
     PrivacyPolicyComponent,
+    ContactModalComponent,
    
   ],
   imports: [
@@ -39,6 +42,8 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
     ResearchModule,
     ContactusModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {provide: TranslateLoader, useFactory: httpTranslateLoader, deps:[HttpClient]}
     })
