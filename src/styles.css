@@ -5280,6 +5280,16 @@ a {
   background-color: rgba(29, 29, 31, 0.62);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px  #191a1c inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #bfc0c2 !important;
+}
 .input-field:focus {
   color: #919293;
 }
@@ -5292,7 +5302,7 @@ a {
   border-bottom-width: 1px;
   border-bottom-color: #222;
   background-color: transparent;
-  color: #818080;
+  color: #bfc0c2;
   font-size: 1em;
 }
 .w-input:focus, .w-select:focus {
@@ -9327,8 +9337,6 @@ textarea.w-input,textarea.w-select{height:auto}
     min-height: 3.8em;
     font-size: 7.5vw;
   }
-
-
 
   .logotypes-title {
     margin-right: 0px;
