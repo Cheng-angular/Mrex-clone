@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-main-today',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainTodayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
   }
 
+  goToWaitList() {
+    this.sharedService.sendClickEventtoWaitList();
+  }
 }
