@@ -1,5 +1,5 @@
 {
-  "name": "daqurbe-clone1",
+  "name": "mrex",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -46,5 +46,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tobias-angular/Mrex-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tobias-angular/Mrex-clone/issues"
+  },
+  "homepage": "https://github.com/Tobias-angular/Mrex-clone#readme"
 }

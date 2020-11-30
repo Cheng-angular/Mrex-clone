@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "daqurbeClone1": {
+    "mrex": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/daqurbeClone1",
+            "outputPath": "dist/mrex",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "daqurbeClone1:build"
+            "browserTarget": "mrex:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "daqurbeClone1:build:production"
+              "browserTarget": "mrex:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "daqurbeClone1:build"
+            "browserTarget": "mrex:build"
           }
         },
         "test": {
@@ -118,18 +118,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "daqurbeClone1:serve"
+            "devServerTarget": "mrex:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "daqurbeClone1:serve:production"
+              "devServerTarget": "mrex:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "daqurbeClone1",
+  "defaultProject": "mrex",
   "cli": {
     "analytics": false
   }
