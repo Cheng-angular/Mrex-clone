@@ -12,6 +12,7 @@ import Typed from 'typed.js';
 export class HeroSectionComponent implements OnInit {
   languagevalue =  false;
   clickEventsubscription: Subscription;
+  currLang: string;
   options = {
     strings: [''],
     typeSpeed: 60,
@@ -40,19 +41,32 @@ export class HeroSectionComponent implements OnInit {
   constructor(public translate: TranslateService, private sharedService: SharedService) { }
 
   ngOnInit(): void {
-    this.options['strings'] = this.englishoptions;
+    this.currLang = this.translate.getBrowserLang();
+    if(this.currLang === 'en') {
+      this.options['strings'] = this.englishoptions;
+    } else {
+      this.options['strings'] = this.frenchsoptions;
+    }
     let typed = new Typed('.typed',this.options);
     this.clickEventsubscription = this.sharedService.getClickEvent2().subscribe(() => {
       this.languagevalue = !this.languagevalue;
-      if(this.languagevalue) {
+      if(this.languagevalue && this.currLang === 'en') {
         typed.destroy();
         this.options['strings'] = this.frenchsoptions;
         typed = new Typed('.typed',this.options);
-      } else {
+      } else if(!this.languagevalue && this.currLang === 'en'){
         typed.destroy();
         this.options['strings'] = this.englishoptions;
         typed = new Typed('.typed',this.options);
-      }    
+      } else if(this.languagevalue && this.currLang === 'fr'){
+        typed.destroy();
+        this.options['strings'] = this.englishoptions;
+        typed = new Typed('.typed',this.options);
+      } else if(!this.languagevalue && this.currLang === 'fr'){
+        typed.destroy();
+        this.options['strings'] = this.frenchsoptions;
+        typed = new Typed('.typed',this.options);
+      }   
     })
   }
 
